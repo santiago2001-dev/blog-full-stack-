@@ -1,24 +1,24 @@
 export class autor{
-    nombres :string 
+    nombre :string 
     apellidos : string 
     constructor(
-        nombres :string,
+        nombre :string,
         apellidos : string ){
-            this.nombres =  nombres
+            this.nombre =  nombre
             this.apellidos = apellidos
 
     }
 }
 export class autorget{
     id : number
-    nombres :string 
+    nombre :string 
     apellidos : string 
     constructor(
         id : number,
-        nombres :string,
+        nombre :string,
         apellidos : string ){
             this.id = id
-            this.nombres =  nombres
+            this.nombre =  nombre
             this.apellidos = apellidos
 
     }

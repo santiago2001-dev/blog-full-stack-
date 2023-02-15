@@ -7,6 +7,8 @@ import { AddAutorComponent } from './add-autor/add-autor.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +24,10 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  
   ],
   exports:[
     PostComponent,

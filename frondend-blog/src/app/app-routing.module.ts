@@ -6,7 +6,7 @@ import { NoPagueNoFoundComponent } from './no-pague-no-found/no-pague-no-found.c
 import { PagesRoutingModule } from './pages/pages-routing.module';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'',redirectTo:'/dashboard',pathMatch:'full'},
   {path:'**',component : NoPagueNoFoundComponent}
 ];
 

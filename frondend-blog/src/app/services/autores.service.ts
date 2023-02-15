@@ -14,18 +14,18 @@ export class AutoresService {
   ) { }
 
   getAutores():Observable<any>{
-    let url = `${this.server}/autores`
+    let url = `${this.server}/autor`
 
     return this.http.get(url)
   }
 
   getAutoresbyId(id:any):Observable<any>{
-    let url = `${this.server}/autores`
+    let url = `${this.server}/autor`
 
     return this.http.get(`${url}/${id}`)
   }
   addAutor(autor :autorget):Observable<any>{
-    let url = `${this.server}/autores`
+    let url = `${this.server}/autor`
 
     return this.http.post(url,autor)
   }
