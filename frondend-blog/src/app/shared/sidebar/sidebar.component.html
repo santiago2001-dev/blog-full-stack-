@@ -1,1 +1,101 @@
-<p>sidebar works!</p>
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a  class="brand-link">
+      <img src="https://res.cloudinary.com/decsantg/image/upload/v1673390414/LOGO_1_w1h1nr.png" style="background-color:#0a0a0a;" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Staycloo store</span>
+    </a>
+  
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="https://res.cloudinary.com/decsantg/image/upload/v1674438093/images_gdvh7r.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Bienvenido</a>
+        </div>
+      </div>
+  
+    
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+  
+  
+               
+           
+  
+        <div *ngIf="ocultar">
+          <div *ngFor="let item of menuItems">
+         
+          <li class="nav-item" *ngFor="let submenu of item.submenu">
+            <a routerLink="{{submenu.url}}" class="nav-link" style="cursor :pointer;">
+              <i class="{{submenu.icono}}"></i>
+              <p class="ml-2">{{submenu.titulo}}</p>
+            </a>
+          </li>
+       </div>
+      
+      </div>
+       
+   
+  
+      <li class="nav-item">
+        <a  class="nav-link" style="cursor: pointer;" routerLink="/home/g">
+          <i class="fa-solid fa-house"></i>
+            <p class="ml-2">home</p>
+        </a>
+        
+      </li>
+  
+   
+  
+     
+          
+        
+      
+           <li class="nav-item">
+            <a  class="nav-link" style="cursor: pointer;"(click)="logiout()">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p class="ml-2">logiout</p>
+            </a>
+            
+          </li>
+        
+     
+          
+         
+  
+  <!---
+          <div *ngIf="ocultar">
+            <li  class="nav-item" *ngFor="let item of menuItems">
+           <div  class="nav-link">
+           <i class="{{item.icono}}"></i>
+           <p class="ml-2">
+             {{item.titulo}} 
+             <span class="badge badge-warning ml-2">{{item.submenu.length}}</span>
+             <i class="right fas fa-angle-left"></i>
+           </p>
+         </div>
+         <ul class="nav nav-treeview">
+  
+           <li class="nav-item" *ngFor="let submenu of item.submenu">
+             <a routerLink="{{submenu.url}}" class="nav-link" style="cursor :pointer;">
+               <i class="{{submenu.icono}}"></i>
+               <p class="ml-2">{{submenu.titulo}}</p>
+             </a>
+           </li>
+         </ul>
+         </li>
+         
+         </div> -->
+        
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->

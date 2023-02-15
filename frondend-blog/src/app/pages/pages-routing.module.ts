@@ -6,14 +6,15 @@ import { PostComponent } from './post/post.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AddAutorComponent } from './add-autor/add-autor.component';
 import { AutorComponent } from './autor/autor.component';
+import { LoginGuard } from '../guards/login.guard';
 
 const routes : Routes =[
   {path :'dashboard',component: PagesComponent,
   children:[
-    {path:'',component:PostComponent},
-    {path:'add-post/:id',component:AddPostComponent},
-    {path:'add-autor',component:AddAutorComponent},
-    {path:'autor',component:AutorComponent},
+    {path:'',component:PostComponent,canActivate:[LoginGuard]},
+    {path:'add-post/:id',component:AddPostComponent,canActivate:[LoginGuard]},
+    {path:'add-autor',component:AddAutorComponent,canActivate:[LoginGuard]},
+    {path:'autor',component:AutorComponent,canActivate:[LoginGuard]},
 
 
   ]},
