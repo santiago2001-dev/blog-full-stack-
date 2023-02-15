@@ -21,6 +21,7 @@ class postController extends Controller
     public function store(Request $request)
     {
         $post = new ModelsPost();
+        $post ->titulo =$request->titulo;
         $post ->contenido =$request->contenido;
         $post ->imagen =$request->imagen;
         $post ->autor =$request->autor;
@@ -40,11 +41,13 @@ class postController extends Controller
    
     public function update(Request $request, $id)
     {
+        $titulo =$request -> input('titulo');
         $contenido =$request -> input('contenido');
         $imagen =$request -> input('imagen');
         $autor =$request -> input('autor');
         ModelsPost::where('id',$id)->update(
             [
+                'titulo'=>$titulo,
                 'contenido'=>$contenido,
                 'imagen'=>$imagen,
                 'autor'=>$autor
