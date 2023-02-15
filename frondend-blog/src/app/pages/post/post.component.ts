@@ -57,11 +57,11 @@ export class PostComponent implements OnInit {
         this.postServ.deltePost(id).subscribe(
           data=>{
           swalWithBootstrapButtons.fire(
-          'producto eliminado!',
-          'el producto ha sido eliminado correctamente',
+          'post eliminado!',
+          'el post ha sido eliminado correctamente',
           'success'
         )
-        this.router.navigate(['/dashboard/productos']); //redirección
+        this.router.navigate(['/dashboard']); //redirección
         this.getPost()
 
       },error=>{

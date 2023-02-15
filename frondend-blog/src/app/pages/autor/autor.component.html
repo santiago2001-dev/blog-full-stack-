@@ -1,1 +1,49 @@
-<p>autor works!</p>
+<div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Registro  de autores  </h3>
+
+        <div class="card-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <button  routerLink="/dashboard/add-autor" class="fa-sharp fa-solid fa-plus">nuevo</button> 
+       
+            <br>
+            <div class="input-group-append"> 
+                
+       
+              
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+            <tr>
+              <th>nombres</th>
+              <th>apellidos</th>
+             
+           
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let autor of listAutors">
+              <td >
+                {{autor.nombre}}
+              </td>
+              <td >
+                {{autor.apellidos}}
+              </td>
+            
+             
+
+            </tr>
+      
+   
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>

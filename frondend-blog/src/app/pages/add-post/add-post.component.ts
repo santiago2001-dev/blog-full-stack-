@@ -61,7 +61,7 @@ Id  : String | null ;
               swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Usuario agregado correctamente',
+                title: 'post agregado correctamente',
                 showConfirmButton: false,
                 timer: 1500
               })
@@ -83,7 +83,7 @@ Id  : String | null ;
               swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Usuario agregado correctamente',
+                title: 'post actualizado correctamente',
                 showConfirmButton: false,
                 timer: 1500
               })
