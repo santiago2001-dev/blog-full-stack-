@@ -35,7 +35,8 @@ class postController extends Controller
     public function show($id)
     {
         $post = ModelsPost::find($id);
-        return $post;
+        return json_encode([$post]);
+
     }
 
    
