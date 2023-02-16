@@ -11,7 +11,7 @@ import { LoginGuard } from '../guards/login.guard';
 const routes : Routes =[
   {path :'dashboard',component: PagesComponent,
   children:[
-    {path:'',component:PostComponent,canActivate:[LoginGuard]},
+    {path:'post-adm',component:PostComponent,canActivate:[LoginGuard]},
     {path:'add-post',component:AddPostComponent,canActivate:[LoginGuard]},
     {path:'update-post/:id',component:AddPostComponent,canActivate:[LoginGuard]},
 

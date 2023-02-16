@@ -61,11 +61,11 @@ Id  : String | null ;
               swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'post agregado correctamente',
+                title: 'post actualizado correctamente',
                 showConfirmButton: false,
                 timer: 1500
               })
-              this.router.navigate(['/dashboard']);
+              this.router.navigate(['/dashboard/post-adm']);
     
     
             },error=>{
@@ -83,11 +83,11 @@ Id  : String | null ;
               swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'post actualizado correctamente',
+                title: 'post creado correctamente',
                 showConfirmButton: false,
                 timer: 1500
               })
-              this.router.navigate(['/dashboard']);
+              this.router.navigate(['/dashboard/post-adm']);
     
     
             },error=>{
@@ -109,7 +109,6 @@ Id  : String | null ;
     this.autroserv.getAutores().subscribe(
       data=>{
         this.listAutors = data
-        console.log(data)
       },error=>{
         console.log(error);
       }
@@ -119,19 +118,19 @@ Id  : String | null ;
 
   getValues(){
     if(this.Id !== null){
-      this.Titulo = "actualizar post"
       this.postServ.getPostByid(this.Id).subscribe(
-       data=>{
-        this.postForm.patchValue({
-          titulo : data[0].titulo,
-          contenido : data[0].contenido,
-          imagen :data[0].imagen,
-          autor:data[0].autor
-        })
-       }
+        data=>{
+          console.log(data[0].titulo)
+          this.postForm.patchValue({
+            titulo: data[0].titulo,
+            contenido :data[0].contenido,
+            imagen :data[0].imagen,
+            autor : data[0].autor
+          })
+        }
       )
- 
     }
-    
   }
+
+
 }

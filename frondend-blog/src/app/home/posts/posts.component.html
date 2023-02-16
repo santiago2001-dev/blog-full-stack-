@@ -5,12 +5,11 @@
     <div *ngFor="let post of listPost" class="product-card">
       <img src="{{post.imagen}}" alt="Product Name" class="product-image">
       <h3 class="product-name">{{post.titulo}}</h3>
-      <div class="product-price">autor :  {{post.autor}}  </div>
-
-      <p class="product-price">{{post.contenido}}</p>
+     
       <br>
+       <li class="fa-solid fa-book"[routerLink]="['/home/post-detail',(post.id)]" ></li> 
   
     </div>
-
+      
    
      </div>

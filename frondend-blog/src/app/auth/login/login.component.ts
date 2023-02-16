@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       (data : any)=>{
         let token = data.access_token
         localStorage.setItem('token',token);
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/dashboard/post-adm'])
         },error=>{
         swal.fire({
           icon: 'error',

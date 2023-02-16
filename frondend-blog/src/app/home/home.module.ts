@@ -5,13 +5,15 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
+import { PostsComponent } from './posts/posts.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   exports :[
     HomeComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    PostsComponent
   ]
 })
 export class HomeModule { }
